@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*reset*/
+*{margin: 0;padding: 0;}
+li{list-style: none}
+a:visited,a:link{color:black;text-decoration: none;}
+.clearfix:after{content:"";clear:both;display: block;}
+
+#Wrap{width: 1200px;background-color: lightgray;margin: 0 auto;}
+
+#header{height: 100px;background-color: pink;width: 100%;}
+
+#header h1{float: left;width: 200px;height: 100px;background-color: skyblue;}
+#header h1 img{width: 200px;height: 40px;}
+
+#header>ul{float: right;width: 800px;height: 100px;}
+#header>ul>li{float: left;width: 25%;height: 100px;line-height: 100px;text-align: center;}
+.submenu{}
