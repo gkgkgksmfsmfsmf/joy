@@ -8,27 +8,17 @@
     <script>
         $(function(){
             $(".submenu").hide();
+            
             $("#header>ul").mouseover(function(){
                 $(".submenu").stop().fadeIn();
                 $(".submenu>li").addClass("active");
             });
+            
             $("#header>ul").mouseout(function(){
                 $(".submenu").stop().fadeOut();
             });
             
-            
-            
-           
-//            $(".submenu>li").mouseover(function(){
-//                var i= $(this).index();
-//                console.log(i);
-//                $(".submenu>li").eq(i).css({"backgroundColor":"#f00"});
-//            }).mouseout(function(){
-//                $(".submenu>li").css({"backgroundColor":"#fff"});
-//            });
-            //$(".submenu>li").mouseout(function(){
-           //    $(".submenu>li").stop().eq(i).css({"backgroundColor":"none"});
-            //});
+ 
         });
     </script>
 </head>
