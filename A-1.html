@@ -18,24 +18,33 @@
                 $(".submenu").stop().slideUp();
             });
             
-//            var current = 0;
-//            var banner = $(".slide ul li");
-//            var bannerCount = banner.length;
-//            
-//            function sMove(){
-//                move(current,"0","-100");
-//                current++;
-//                move(current);
-//                if(current==bannerCount){current=0};
-//                move(current,"-100%","0");
-//            }
-//            
-//            setInterval(sMove,3000);
-//            
-//            function move(i,start,end){
-//                banner.eq(i).css("top",start).animate({top:end},1000);
-//            }
-//            
+            
+            var current = 0;
+
+			function hanM(){
+			move(current,"0","-100%");
+			current++;
+			if(current==3){
+				current=0
+			}
+			move(current,"100%","0");
+			}
+
+			setInterval(hanM,3000);
+
+			function move(index,start,end){
+
+				$(".slide li").eq(index).css("top",start).stop().animate({top:end},3000);
+			};
+            
+            
+            $(".tab_menu>ul>li").click(function(){
+                var liNum  = $(this).index();
+                $(".tab_menu>ul>li").removeClass();
+                $(".txt>div").hide();
+                $(".txt>div").eq(liNum).fadeIn();
+                
+            });
  
         });
     </script>
@@ -86,7 +95,6 @@
             </ul>
         </header>
    
-<!--
     <div class="slide">
         <ul>
             <li>
@@ -101,7 +109,30 @@
           
         </ul>
     </div>
--->
+    
+    <div class="tab_menu">
+       
+        <ul class="clearfix">
+            <li>공지사항</li>
+            <li>갤러리</li>
+        </ul>
+        
+        <div class="txt">
+            <div>
+                공지사항1
+                공지사항2
+                공지사항3
+                공지사항4
+            </div>
+            
+            <div>
+               이미지1
+               이미지2
+            </div>
+        </div>
+        
+    </div>
+    
 </div>
 </body>
 </html>

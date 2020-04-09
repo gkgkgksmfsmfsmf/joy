@@ -15,7 +15,7 @@ a:visited,a:link{color:black;text-decoration: none;}
 #header>ul{float: right;width: 800px;height: 100px;}
 #header>ul>li{float: left;width: 25%;height: 100px;line-height: 100px;text-align: center;}
 
-.submenu{background-color: orange;}
+.submenu{background-color: orange;position: relative;z-index: 1}
 .submenu>li{height: 40px;line-height: 40px;}
 .submenu>li.active:hover{background-color:rgba(0,0,0,0.5);color:white}
 .submenu>li.active:hover a{color:white}
@@ -25,3 +25,8 @@ a:visited,a:link{color:black;text-decoration: none;}
 .slide li>img{display: block;width: 1200px;height: 300px;}
 .slide li{position: absolute;top: 100%;}
 .slide li:nth-child(1){top:0;}
+
+.tab_menu{width: 500px;margin: 0 auto;}
+.tab_menu li{float: left;width: 50%;line-height: 40px;text-align: center;}
+.tab_menu .txt div{display: none;}
+.tab_menu .txt div:first-child{display: block;}
