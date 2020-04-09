@@ -9,23 +9,31 @@
         $(function(){
             $(".submenu").hide();
             $("#header>ul").mouseover(function(){
+                $(".s").addClass("active");
                 $(".submenu").stop().fadeIn();
             });
             $("#header>ul").mouseout(function(){
                 $(".submenu").stop().fadeOut();
             });
             
-           
-            $(".submenu>li").mouseover(function(){
+//            $(".submenu>li").mouseover(function(){
+//                $(".submenu").addClass("hover");
+//            });
+//            
+//            $(".submenu>li").mouseout(function(){
+//                $(".submenu>li").removeClass("hover");
+//            });
+            
+            
+            $(".s .submenu>li").mouseover(function(){
                 var i= $(this).index();
-                console.log(i);
-                $(".submenu>li").eq(i).css({"backgroundColor":"#f00"});
-            }).mouseout(function(){
-                $(".submenu>li").css({"backgroundColor":"#fff"});
+                console.log(i); $("#header .s .submenu>li").eq(i).css({"backgroundColor":"#f00"});
+            }).mouseout(function(){                                         $("#header .s .submenu>li").css({"backgroundColor":"#fff"});
             });
-            //$(".submenu>li").mouseout(function(){
-           //    $(".submenu>li").stop().eq(i).css({"backgroundColor":"none"});
-            //});
+            
+//            $(".submenu>li").mouseout(function(){
+//                $(".submenu>li").eq(i).css({"backgroundColor":"none     "});
+//            });
         });
     </script>
 </head>
@@ -33,12 +41,10 @@
     <div id="Wrap">
         <header id="header" class="clearfix">
             <h1>
-                <a href="#">
-<!--                    <img src="images/logo.png" alt="logo">-->
-                </a>
+                <a href="#"></a>
             </h1>
             <ul class="clearfix" >
-                <li>
+                <li class="s">
                     <a href="#">탑</a>
                     <ul class="submenu">
                         <li><a href="#">블라우스</a></li>
@@ -47,7 +53,7 @@
                         <li><a href="#">니트</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="s">
                     <a href="#">아우터</a>
                     <ul class="submenu">
                         <li><a href="#">자켓</a></li>
@@ -56,7 +62,7 @@
                         <li><a href="#">머플러</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="s">
                     <a href="#">팬츠</a>
                     <ul class="submenu">
                         <li><a href="#">청바지</a></li>
@@ -65,7 +71,7 @@
                         <li><a href="#">레깅스</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="s">
                     <a href="#">악세서리</a>
                     <ul class="submenu">
                         <li><a href="#">귀고리</a></li>
