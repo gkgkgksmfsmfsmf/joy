@@ -8,32 +8,44 @@
     <script>
         $(function(){
             $(".submenu").hide();
+            
             $("#header>ul").mouseover(function(){
-                $(".s").addClass("active");
-                $(".submenu").stop().fadeIn();
-            });
-            $("#header>ul").mouseout(function(){
-                $(".submenu").stop().fadeOut();
+                $(".submenu").stop().slideDown();
+              $(".submenu>li").addClass("active");
             });
             
-//            $(".submenu>li").mouseover(function(){
-//                $(".submenu").addClass("hover");
-//            });
-//            
-//            $(".submenu>li").mouseout(function(){
-//                $(".submenu>li").removeClass("hover");
-//            });
-            
-            
-            $(".s .submenu>li").mouseover(function(){
-                var i= $(this).index();
-                console.log(i); $("#header .s .submenu>li").eq(i).css({"backgroundColor":"#f00"});
-            }).mouseout(function(){                                         $("#header .s .submenu>li").css({"backgroundColor":"#fff"});
+            $("#header>ul").mouseleave(function(){
+                $(".submenu").stop().slideUp();
             });
             
-//            $(".submenu>li").mouseout(function(){
-//                $(".submenu>li").eq(i).css({"backgroundColor":"none     "});
-//            });
+            
+            var current = 0;
+
+			function hanM(){
+			move(current,"0","-100%");
+			current++;
+			if(current==3){
+				current=0
+			}
+			move(current,"100%","0");
+			}
+
+			setInterval(hanM,3000);
+
+			function move(index,start,end){
+
+				$(".slide li").eq(index).css("top",start).stop().animate({top:end},3000);
+			};
+            
+            
+            $(".tab_menu>ul>li").click(function(){
+                var liNum  = $(this).index();
+                $(".tab_menu>ul>li").removeClass();
+                $(".txt>div").hide();
+                $(".txt>div").eq(liNum).fadeIn();
+                
+            });
+ 
         });
     </script>
 </head>
@@ -44,7 +56,7 @@
                 <a href="#"></a>
             </h1>
             <ul class="clearfix" >
-                <li class="s">
+                <li>
                     <a href="#">탑</a>
                     <ul class="submenu">
                         <li><a href="#">블라우스</a></li>
@@ -53,7 +65,7 @@
                         <li><a href="#">니트</a></li>
                     </ul>
                 </li>
-                <li class="s">
+                <li>
                     <a href="#">아우터</a>
                     <ul class="submenu">
                         <li><a href="#">자켓</a></li>
@@ -62,7 +74,7 @@
                         <li><a href="#">머플러</a></li>
                     </ul>
                 </li>
-                <li class="s">
+                <li>
                     <a href="#">팬츠</a>
                     <ul class="submenu">
                         <li><a href="#">청바지</a></li>
@@ -71,7 +83,7 @@
                         <li><a href="#">레깅스</a></li>
                     </ul>
                 </li>
-                <li class="s">
+                <li>
                     <a href="#">악세서리</a>
                     <ul class="submenu">
                         <li><a href="#">귀고리</a></li>
@@ -82,6 +94,45 @@
                 </li>
             </ul>
         </header>
+   
+    <div class="slide">
+        <ul>
+            <li>
+                 <img src="images/images03.png" alt="이미지">
+            </li>
+            <li>
+                 <img src="images/images04.png" alt="이미지">
+            </li>
+            <li>
+                 <img src="images/images05.png" alt="이미지">
+            </li>
+          
+        </ul>
     </div>
+    
+    <div class="tab_menu">
+       
+        <ul class="clearfix">
+            <li>공지사항</li>
+            <li>갤러리</li>
+        </ul>
+        
+        <div class="txt">
+            <div>
+                공지사항1
+                공지사항2
+                공지사항3
+                공지사항4
+            </div>
+            
+            <div>
+               이미지1
+               이미지2
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
 </body>
 </html>
