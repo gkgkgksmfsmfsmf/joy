@@ -10,32 +10,32 @@
             $(".submenu").hide();
             
             $("#header>ul").mouseover(function(){
-                $(".submenu").stop().fadeIn();
-                $(".submenu>li").addClass("active");
+                $(".submenu").stop().slideDown();
+              $(".submenu>li").addClass("active");
             });
             
-            $("#header>ul").mouseout(function(){
-                $(".submenu").stop().fadeOut();
+            $("#header>ul").mouseleave(function(){
+                $(".submenu").stop().slideUp();
             });
             
-            var current = 0;
-            var banner = $(".slide ul li");
-            var bannerCount = banner.length;
-            
-            function sMove(){
-                move(current,"0","-100");
-                current++;
-                move(current);
-                if(current==bannerCount){current=0};
-                move(current,"-100%","0");
-            }
-            
-            setInterval(sMove,3000);
-            
-            function move(i,start,end){
-                banner.eq(i).css("top",start).animate({top:end},1000);
-            }
-            
+//            var current = 0;
+//            var banner = $(".slide ul li");
+//            var bannerCount = banner.length;
+//            
+//            function sMove(){
+//                move(current,"0","-100");
+//                current++;
+//                move(current);
+//                if(current==bannerCount){current=0};
+//                move(current,"-100%","0");
+//            }
+//            
+//            setInterval(sMove,3000);
+//            
+//            function move(i,start,end){
+//                banner.eq(i).css("top",start).animate({top:end},1000);
+//            }
+//            
  
         });
     </script>
@@ -86,6 +86,7 @@
             </ul>
         </header>
    
+<!--
     <div class="slide">
         <ul>
             <li>
@@ -100,6 +101,7 @@
           
         </ul>
     </div>
+-->
 </div>
 </body>
 </html>

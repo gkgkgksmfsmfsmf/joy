@@ -14,6 +14,7 @@ a:visited,a:link{color:black;text-decoration: none;}
 
 #header>ul{float: right;width: 800px;height: 100px;}
 #header>ul>li{float: left;width: 25%;height: 100px;line-height: 100px;text-align: center;}
+
 .submenu{background-color: orange;}
 .submenu>li{height: 40px;line-height: 40px;}
 .submenu>li.active:hover{background-color:rgba(0,0,0,0.5);color:white}
