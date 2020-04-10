@@ -19,6 +19,8 @@
             });
             
             
+            
+            
             var current = 0;
 
 			function hanM(){
@@ -37,12 +39,13 @@
 				$(".slide li").eq(index).css("top",start).stop().animate({top:end},3000);
 			};
             
-            
             $(".tab_menu>ul>li").click(function(){
                 var liNum  = $(this).index();
-                $(".tab_menu>ul>li").removeClass();
+                 $(".tab_menu>ul>li").removeClass();
+                $(".tab_menu>ul>li").eq(liNum).addClass("active01");
                 $(".txt>div").hide();
                 $(".txt>div").eq(liNum).fadeIn();
+                
                 
             });
  
@@ -119,19 +122,21 @@
         
         <div class="txt">
             <div>
-                공지사항1
-                공지사항2
-                공지사항3
-                공지사항4
+                <a href="#">공지사항1 Lorem ipsum dolor sit amet.</a>
+                <a href="#">공지사항2 Lorem ipsum dolor sit amet,</a>
+                <a href="#">공지사항3 Lorem ipsum dolor sit amet,</a>
+                <a href="#">공지사항4 Lorem ipsum dolor sit amet.</a>
             </div>
             
-            <div>
-               이미지1
-               이미지2
+            <div class="clearfix">
+               <img src="images/images03.png" alt="img1">
+               <img src="images/images04.png" alt="img2">
+               <img src="images/images05.png" alt="img3">
             </div>
         </div>
         
     </div>
+    
     
 </div>
 </body>
