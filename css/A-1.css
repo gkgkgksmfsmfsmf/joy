@@ -21,12 +21,23 @@ a:visited,a:link{color:black;text-decoration: none;}
 .submenu>li.active:hover a{color:white}
 
 .slide{width: 1200px;height: 300px;}
-.slide ul{position: relative;width: 1200px;height:300px;overflow: hidden}
+.slide ul{position: relative;width: 1200px;height:300px;overflow: hidden;}
 .slide li>img{display: block;width: 1200px;height: 300px;}
 .slide li{position: absolute;top: 100%;}
 .slide li:nth-child(1){top:0;}
 
-.tab_menu{width: 500px;margin: 0 auto;}
+.tab_menu{width: 400px;_background-color: orange;height: 200px;}
 .tab_menu li{float: left;width: 50%;line-height: 40px;text-align: center;}
-.tab_menu .txt div{display: none;}
+.tab_menu li.active01{background-color: skyblue;}
+.tab_menu .txt div{display: none;height: 160px;width: 100%;padding-top: 20px;}
 .tab_menu .txt div:first-child{display: block;}
+.txt a{display: block;}
+.txt>div:nth-child(2) img{
+    display: block;
+    width: 30%;
+    height: 130px;
+    float: left;
+    margin-right: 2.5%;
+}
+.txt>div:nth-child(2){}
+.txt>div:nth-child(2) img:first-child{margin-left: 2.5%;}
