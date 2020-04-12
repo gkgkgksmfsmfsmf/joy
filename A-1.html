@@ -7,15 +7,14 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script>
         $(function(){
-            $(".submenu").hide();
+
             
-            $("#header>ul").mouseover(function(){
-                $(".submenu").stop().slideDown();
-              $(".submenu>li").addClass("active");
+            $("header nav>ul.gnb>li").mouseover(function(){
+                $("ul.sub").stop().slideDown();
             });
             
-            $("#header>ul").mouseleave(function(){
-                $(".submenu").stop().slideUp();
+            $("header nav>ul.gnb>li").mouseleave(function(){
+                $("ul.sub").stop().slideUp();
             });
             
             $(".txt a").eq(0).click(function(){
@@ -74,49 +73,51 @@
            말씀을 올리며 할인관련 공지를..
        </div>
    </div>
-    <div id="Wrap">
-        <header id="header" class="clearfix">
+    <div class="wrap">
+        <header class="clearfix">
             <h1>
                 <a href="#">logo</a>
             </h1>
-            <ul class="clearfix" >
-                <li>
-                    <a href="#">탑</a>
-                    <ul class="submenu">
-                        <li><a href="#">블라우스</a></li>
-                        <li><a href="#">티</a></li>
-                        <li><a href="#">셔츠</a></li>
-                        <li><a href="#">니트</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">아우터</a>
-                    <ul class="submenu">
-                        <li><a href="#">자켓</a></li>
-                        <li><a href="#">코트</a></li>
-                        <li><a href="#">가디건</a></li>
-                        <li><a href="#">머플러</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">팬츠</a>
-                    <ul class="submenu">
-                        <li><a href="#">청바지</a></li>
-                        <li><a href="#">짧은바지</a></li>
-                        <li><a href="#">긴바지</a></li>
-                        <li><a href="#">레깅스</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">악세서리</a>
-                    <ul class="submenu">
-                        <li><a href="#">귀고리</a></li>
-                        <li><a href="#">목걸이</a></li>
-                        <li><a href="#">반지</a></li>
-                        <li><a href="#">팔찌</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <nav>
+                <ul class="gnb clearfix" >
+                    <li>
+                        <a href="#">탑</a>
+                        <ul class="sub">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아우터</a>
+                        <ul class="sub">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">팬츠</a>
+                        <ul class="sub">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">악세서리</a>
+                        <ul class="sub">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </header>
    
     <div class="slide">
