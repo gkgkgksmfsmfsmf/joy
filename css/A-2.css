@@ -4,6 +4,10 @@ li{list-style: none}
 a:visited,a:link{text-decoration: none;color:inherit}
 .clearfix::after{content:"";display: block;clear: both}
 
+/*modal*/
+.modal{width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: fixed;z-index: 3;display: none;}
+.modal .modal_inner{width: 500px;height: 500px;background-color: #fff;position: absolute;left: 50%;top: 50%;transform:translate(-50%,-50%);text-align: center;}
+button{width: 50px;height: 50px;font-size: 30px;position: absolute;right: 0;bottom: 0;}
 /*wrap*/
 .wrap{width: 1200px;margin: 0 auto;}
 
@@ -30,6 +34,29 @@ header nav ul.gnb>li>ul.sub>li>a{display: block;width: 100%;height:100%;}
 .slide ul li img{width:1200px;height: 300px;display: block;}
 /*contents*/
 .contents{width: 100%;height: 200px;}
+.contents section{float: left;}
+.contents section h2{width: 100px;height: 30px;line-height: 30px;background-color: green;border-radius: 10px 10px 0 0;text-align: center;color:white;font-size: 18px;font-weight: normal;}
+.contents section h2.not_title{width: 100%;height: 100%;}
+.contents .notice{width: 400px;height: 200px;}
+.contents .notice>ul{width: 100%;box-sizing: border-box;border: 1px solid #000;height: 170px;}
+.contents .notice ul li{width: 100%;height: 28px;line-height: 28px;font-size: 13px;position: relative;}
+.contents .notice ul li:hover{background-color: green;color:white}
+.contents .notice ul li a{display: block;box-sizing: border-box;padding-left: 10px;width: 100%;}
+.contents .notice ul li .day{position: absolute;right: 10px;top: 0;}
+.contents .gal{width: 450px;height: 200px;}
+.contents .gal ul{width: 100%;height: 170px;box-sizing: border-box;border: 1px solid #000;}
+.contents .gal ul li{width:140px;height: 155px;float: left;margin-left: 7px;margin-top: 7px;}
+.contents .gal ul li:hover{opacity: 0.8}
+.contents .gal img{width: 140px;height: 155px;}
 
+.contents .banner{width: 350px;height: 200px;}
+.contents .banner img{width: 350px;height: 200px;}
 /*footer*/
 footer{width: 100%;height: 100px;}
+footer h2{float: left;width: 200px;height: 100px;background-color: skyblue;}
+footer .copy{width: 850px;float: left;font-size: 15px;box-sizing: border-box;padding-top: 20px;padding-left: 10px;}
+footer .copy li{float: left;margin-right: 20px;}
+footer .fam{width: 150px;float: left;font-size: 14px;text-align: center;}
+footer .fam p{width: 100%;height: 25px;line-height: 25px;background-color: lightgreen;cursor: pointer}
+footer .fam ul{}
+footer .fam ul li{width: 100%;height: 25px;line-height: 25px;background-color:darkgrey;}
