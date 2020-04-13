@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>A-3</title>
+    <link rel="stylesheet" href="css/A-3.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("nav ul.gnb>li").mouseover(function(){
+                $(this).find(".sub").stop().fadeIn();
+            });
+            $("nav ul.gnb>li").mouseleave(function(){
+                $("ul.sub").stop().fadeOut();
+            });
+            
+            var current =0;
+            function slide(){
+                move(current,"0","-100%");
+                current++;
+                if(current==3){current=0}
+                move(current,"100%","0");
+            }
+            setInterval(slide,3000);
+            function move(index,start,end){
+                $(".slide li").eq(index).css("left",start).stop().animate({left:end},3000);
+            }
+            
+            $(".notice_gal>ul>li").click(function(){
+                var liNum = $(this).index(); $(".notice_gal>ul>li").removeClass("active"); $(".notice_gal>ul>li").eq(liNum).addClass("active");
+                $(".txt ul").hide();
+                $(".txt ul").stop().eq(liNum).fadeIn();
+            });
+            
+            $(".notice>li").eq(0).click(function(){
+                $(".modal").stop().fadeIn();
+            });
+            $("button").click(function(){
+                $(".modal").stop().fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+   <div class="modal">
+       <div class="modal_inner">
+           <button>X</button>
+           <div class="tit">강원천문대 사이트입니다.</div>
+           강원천문대 사이트를 방문해주신 여러분께 감사의 말씀을 드리며...
+       </div>
+   </div>
+    <div class="wrap">
+        <header class="clearfix">
+            <h1>
+                <a href="#">logo</a>
+            </h1>
+            <nav>
+                <ul class="gnb clearfix">
+                    <li><a href="#">강원천문대</a>
+                        <ul class="sub">
+                            <li><a href="#">천문대소개</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용안내</a>
+                        <ul class="sub">
+                            <li><a href="#">프로그램</a></li>
+                            <li><a href="#">관람시간표</a></li>
+                            <li><a href="#">이달의 별자리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">천문대예약</a>
+                        <ul class="sub">
+                            <li><a href="#">예약하기</a></li>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="#">예약취소</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">방문후기</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="slide">
+            <ul>
+                <li><img src="images/images03.png" alt="이미지1"></li>
+                <li><img src="images/images04.png" alt="이미지1"></li>
+                <li><img src="images/images05.png" alt="이미지1"></li>
+            </ul>
+        </div>
+        <div class="contents clearfix">
+            <section class="notice_gal">
+                <ul>
+                    <li class="active"><a href="#">공지사항</a></li>
+                    <li><a href="#">갤러리</a></li>
+                </ul>
+                <div class="txt">
+                    <ul class="notice">
+                        <li><a href="#">공지사항1 Lorem ipsum dolor sit amet <span>2010-03-11</span></a></li>
+                        <li><a href="#">공지사항2 Lorem ipsum dolor sit amet <span>2010-03-11</span></a></li>
+                        <li><a href="#">공지사항3 Lorem ipsum dolor sit amet <span>2010-03-11</span></a></li>
+                        <li><a href="#">공지사항4 Lorem ipsum dolor sit amet <span>2010-03-11</span></a></li>
+                    </ul>
+                    <ul class="gal clearfix">
+                        <li><a href="#"><img src="images/images03.png" alt="이미지1"></a></li>
+                        <li><a href="#"><img src="images/images03.png" alt="이미지1"></a></li>
+                        <li><a href="#"><img src="images/images03.png" alt="이미지1"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="banner"></section>
+            <section class="baro"></section>
+        </div>
+        <footer class="clearfix">
+            <h2><a href="#">logo</a></h2>
+            <div class="copy"></div>
+        </footer>
+    </div>
+</body>
+</html>

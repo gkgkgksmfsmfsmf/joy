@@ -33,6 +33,11 @@
             $("button").click(function(){
                 $(".modal").stop().fadeOut();
             });
+            
+            $("p").click(function(){
+                $(this).toggleClass("on");
+                $("footer .fam ul").stop().slideToggle();
+            });
         });
     </script>
 </head>
@@ -164,7 +169,7 @@
                 <li>E-mail:master@comeins.com</li>
             </ul>
             <div class="fam">
-                <p>패밀리사이트<i>&dtrif;</i></p>
+                <p>패밀리사이트<span>&dtrif;</span></p>
                 <ul>
                     <li><a href="#">네이버</a></li>
                     <li><a href="#">구글</a></li>

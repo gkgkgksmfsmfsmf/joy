@@ -58,5 +58,7 @@ footer .copy{width: 850px;float: left;font-size: 15px;box-sizing: border-box;pad
 footer .copy li{float: left;margin-right: 20px;}
 footer .fam{width: 150px;float: left;font-size: 14px;text-align: center;}
 footer .fam p{width: 100%;height: 25px;line-height: 25px;background-color: lightgreen;cursor: pointer}
-footer .fam ul{}
+/*footer .fam p i{transform: rotate(45deg)}*/
+footer .fam p.on span{display: inline-block;transform: rotate(180deg);}
+footer .fam ul{display: none;}
 footer .fam ul li{width: 100%;height: 25px;line-height: 25px;background-color:darkgrey;}
