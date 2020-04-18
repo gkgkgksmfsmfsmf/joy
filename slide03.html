@@ -28,7 +28,7 @@
             }
             setInterval(slide,3000);
             function move(index,start,end){
-                $(".slide li").eq(index).css("opacity",start).stop().animate({opacity:end},3000)
+                $(".slide li").eq(index).css("z-index",start).stop().animate({opacity:end})
             }
         });
     </script>
@@ -58,7 +58,7 @@
         .slide{width: 100%;height: 300px;}
         .slide ul{width: 100%;height: 300px;position: relative;}
         .slide li img{display: block;width: 1200px;height: 300px;}
-        .slide li{position: absolute;top: 0;opacity: 0;transition: 0.3s}
+        .slide li{position: absolute;top: 0;opacity: 0;}
         .slide li:first-child{opacity: 1}
         
     </style>
