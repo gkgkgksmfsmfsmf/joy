@@ -19,4 +19,10 @@ $(function(){
     function move(index,start,end){
         $(".slide li").eq(index).css("left",start).stop().animate({left:end},1000);
     }
+    $(".notice a").eq(0).click(function(){
+        $(".modal").stop().fadeIn();
+    });
+    $("button").click(function(){
+        $(".modal").stop().fadeOut();
+    });
 });
